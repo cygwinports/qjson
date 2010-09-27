@@ -1,0 +1,12 @@
+inherit qt4-cmake
+
+DESCRIPTION="Qt4 JSON library"
+HOMEPAGE="http://qjson.sourceforge.net/"
+SRC_URI="mirror://sourceforge/qjson/${P}.tar.bz2"
+SRC_DIR=${PN}
+
+PKG_NAMES="libqjson0 libqjson-devel"
+libqjson0_CONTENTS="usr/bin/*-0.dll usr/share/doc/"
+libqjson_devel_CONTENTS="usr/include/ usr/lib/"
+
+CYGCMAKE_ARGS="-DCMAKE_MODULES_INSTALL_DIR=/usr/lib/cmake/${PN}"
