@@ -1,0 +1,18 @@
+inherit qt4-cmake
+
+NAME="qjson"
+VERSION=0.8.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Qt4 JSON library"
+DESCRIPTION="JSON (JavaScript Object Notation) is a lightweight data-
+interchange format. It can represents integer, real number, string, an ordered
+sequence of value, and a collection of name/value pairs. QJson is a Qt-based
+library that maps JSON data to QVariant objects: JSON arrays will be mapped to
+QVariantList instances, while JSON objects will be mapped to QVariantMap."
+HOMEPAGE="http://qjson.sourceforge.net/"
+SRC_URI="mirror://sourceforge/qjson/qjson-${VERSION}.tar.bz2"
+
+PKG_NAMES="libqjson0 libqjson-devel"
+libqjson0_CONTENTS="usr/bin/*-0.dll usr/share/doc/"
+libqjson_devel_CONTENTS="usr/include/ usr/lib/"
